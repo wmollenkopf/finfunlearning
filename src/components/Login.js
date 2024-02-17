@@ -1,6 +1,7 @@
 // src/components/Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'; // Import CSS file for styling
 
 const Login = ({ users, updateUser }) => {
   const [userType, setUserType] = useState('');
@@ -41,23 +42,25 @@ const Login = ({ users, updateUser }) => {
       {userType === '' ? (
         <div>
           <h2>Select User Type</h2>
-          <button onClick={() => handleUserTypeSelection('student')}>Student</button>
-          <button onClick={() => handleUserTypeSelection('school')}>School</button>
+          <div className="button-container">
+           <button className="student-button" onClick={() => handleUserTypeSelection('student')}>Student</button>
+            <button className="school-button" onClick={() => handleUserTypeSelection('school')}>School</button>
+          </div>
         </div>
       ) : (
-        <div>
-          <h2>{userType === 'student' ? 'Student Login' : 'School Login'}</h2>
-          <div>
-            <label>Username:</label>
-            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-          </div>
-          <div>
-            <label>Password:</label>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          </div>
-          <button onClick={handleLogin}>Login</button>
-          {error && <p>{error}</p>}
+        <div className="login-container">
+        <h2>{userType === 'student' ? 'Student Login' : 'School Login'}</h2>
+        <div className="input-container">
+          <label className="input-label">Username:</label>
+          <input className="input-field" type="text" value={username} onChange={(e) => setUsername(e.target.value)} maxLength={20} />
         </div>
+        <div className="input-container">
+          <label className="input-label">Password:</label>
+          <input className="input-field" type="password" value={password} onChange={(e) => setPassword(e.target.value)} maxLength={20} />
+        </div>
+        <button className="login-button" onClick={handleLogin}>Login</button>
+        {error && <p className="error-message">{error}</p>}
+      </div>
       )}
     </div>
   );
