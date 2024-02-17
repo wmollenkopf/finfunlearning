@@ -1,0 +1,30 @@
+/* src/components/Simulation/simulations/Simulation1.css */
+.simulation1-container {
+	/* CSS styles for Simulation 1 */
+
+
+	
+  }
+  
+
+
+  .job-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px;
+  }
+  
+  .job-item {
+	background-color: #f9f9f9;
+	padding: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+  }
+  
+  .job-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 2px 4px rgba(0, 68, 255, 0.8); /* Blue shadow effect */
+  }
+  
+  

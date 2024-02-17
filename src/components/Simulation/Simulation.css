@@ -1,0 +1,56 @@
+/* src/components/Simulation/Simulation.css */
+.simulation-container {
+	display: flex;
+  }
+  
+  .avatar-container {
+	flex: 1;
+	padding: 20px;
+  }
+  
+  .avatar-image {
+	border-radius: 50%;
+	width: 100%;
+	height: auto;
+  }
+  
+  .simulation-content {
+	flex: 3;
+	padding: 20px;
+  }
+  
+  .larger-text {
+	font-size: 20px;
+  }
+  
+  .placeholder-text {
+	margin-top: 20px;
+	/* Placeholder text styles */
+  }
+  
+  .begin-button {
+	background-color: #007bff; /* Blue background color */
+	color: #ffffff; /* White text color */
+	padding: 10px 20px; /* Padding around the text */
+	border: none; /* Remove border */
+	border-radius: 5px; /* Rounded corners */
+	cursor: pointer; /* Show pointer cursor on hover */
+  }
+  
+  .begin-button:hover {
+	background-color: #0056b3; /* Darker blue background color on hover */
+  }
+  
+  .next-button {
+	background-color: #007bff; /* Blue background color */
+	color: #ffffff; /* White text color */
+	padding: 10px 20px; /* Padding around the text */
+	border: none; /* Remove border */
+	border-radius: 5px; /* Rounded corners */
+	cursor: pointer; /* Show pointer cursor on hover */
+  }
+  
+  .next-button:hover {
+	background-color: #0056b3; /* Darker blue background color on hover */
+  }
+  
