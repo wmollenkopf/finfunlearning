@@ -1,22 +1,25 @@
 // src/App.js
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link,
 } from 'react-router-dom';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+
+// Example user data
+const users = [
+  { username: 'user1', email: 'user1@example.com', password: 'password1' },
+  { username: 'user2', email: 'user2@example.com', password: 'password2' },
+  // Add more users as needed
+];
+
+const test_user = users[0];
 
 const Home = () => {
   return <h2>Home Page</h2>;
-};
-
-const Dashboard = () => {
-  return <h2>Dashboard Page</h2>;
-};
-
-const Login = () => {
-  return <h2>Login Page</h2>;
 };
 
 const NavBar = () => {
@@ -60,13 +63,25 @@ const NavBar = () => {
 };
 
 const App = () => {
+  // Initialize state with test_user upon first page load
+  const [user, setUser] = useState(test_user);
+
+  const updateUser = (updatedUser) => {
+    setUser(updatedUser);
+  };
+
   return (
     <Router>
       <NavBar />
       <div className="container mt-4">
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/login" element={<Login />} />
+          {/* Pass user and updateUser as props to the Dashboard component */}
+          <Route
+            path="/dashboard"
+            element={<Dashboard user={user} updateUser={updateUser} />}
+          />
+          {/* Use the element prop to pass props to the Login component */}
+          <Route path="/login" element={<Login users={users} updateUser={updateUser} />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
