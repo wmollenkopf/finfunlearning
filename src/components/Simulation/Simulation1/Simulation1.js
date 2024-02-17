@@ -57,16 +57,20 @@ const Simulation1 = ({ user, updateUser }) => {
         </div>
       ) : (
         // Render the job list if no job is selected
-        <div className="job-list">
-          {jobs.map((job, index) => (
-            <div key={index} className="job-item" onClick={() => handleJobClick(job)}>
-              {/* Render job title, description, and image */}
-              <h3>{job.title}</h3>
-              <p>{job.description}</p>
-              <img src={job.image} alt={job.title} className="job-image" />
-            </div>
-          ))}
-        </div>
+<div className="job-list">
+  {jobs.map((job, index) => (
+    <div
+      key={index}
+      className="job-item"
+      onClick={() => handleJobClick(job)}
+    >
+      {/* Render job title, description, and image */}
+      <h3>{job.title} @ ${job.pay}</h3>
+      <p>{job.description}</p>
+      <img src={job.image} alt={job.title} className="job-image" />
+    </div>
+  ))}
+</div>
       )}
     </div>
   );

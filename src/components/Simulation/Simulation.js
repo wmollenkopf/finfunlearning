@@ -26,12 +26,20 @@ const Simulation = ({ user, updateUser }) => {
     );
   }
 
-  
+
   return (
     <div className="simulation-container">
       {/* Left side */}
       <div className="avatar-container">
         <img src={user.avatar} alt="Avatar" className="avatar-image" />
+        <strong>{user.name}</strong>
+        {/* Display job details if user has a job */}
+        {user.job && (
+          <div>
+            <strong>Job: </strong>{user.job.title}
+            <p><strong>Pay: </strong>{`$${user.job.pay} per hour`}</p>
+          </div>
+        )}
       </div>
 
       {/* Right side */}
