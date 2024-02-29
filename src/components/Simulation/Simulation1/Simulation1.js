@@ -43,7 +43,7 @@ const Simulation1 = ({ user, updateUser }) => {
       {/* Add content for Simulation 1 */}
       <h2>Simulation 1: Your First Job!</h2>
       {showOpenBankAcct ? (
-        <OpenBankAcct user={user} updateUser={updateUser} />
+          <OpenBankAcct user={user} updateUser={updateUser} />
       ) : user.job ? (
         // Placeholder text when a job is selected
         <div>

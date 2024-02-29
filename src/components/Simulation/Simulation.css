@@ -54,3 +54,16 @@
 	background-color: #0056b3; /* Darker blue background color on hover */
   }
   
+  .prev-button {
+	background-color: #6c757d; /* Gray background color */
+	color: #ffffff; /* White text color */
+	padding: 10px 20px; /* Padding around the text */
+	border: none; /* Remove border */
+	border-radius: 5px; /* Rounded corners */
+	cursor: pointer; /* Show pointer cursor on hover */
+	margin-right: 10px; /* Add margin to separate from next button */
+}
+
+.prev-button:hover {
+	background-color: #5a6268; /* Darker gray background color on hover */
+}

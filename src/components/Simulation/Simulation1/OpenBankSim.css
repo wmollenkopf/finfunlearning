@@ -1,0 +1,43 @@
+.dialog-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 5px solid #333; /* Dark border color */
+	border-radius: 20px; /* Curved border */
+	background-color: #f0f0f0; /* Lighter background color */
+	padding: 20px; /* Add some padding */
+  }
+  
+  
+.dialog-prompt {
+	width: 75%;
+	border: 3px solid #333; /* Dark border color */
+	border-radius: 5px; /* Curved border */
+	padding: 10px;
+	background-color: pink; /* Lighter background color */
+	margin: 5px;
+}
+  
+  .options-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .option {
+	width: 400px;
+	text-align: center;
+	background-color: #007bff;
+	color: #ffffff;
+	padding: 15px 30px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .option:hover {
+	background-color: #0056b3;
+  }
+  

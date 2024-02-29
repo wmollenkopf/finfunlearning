@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Simulation.css'; // Import CSS file for styling
 import Simulation1 from './Simulation1/Simulation1';
+
 import { useNavigate } from 'react-router-dom';
 
 const Simulation = ({ user, updateUser }) => {

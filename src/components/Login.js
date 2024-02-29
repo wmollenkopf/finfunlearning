@@ -22,16 +22,26 @@ const Login = ({ users, updateUser }) => {
     }
 
     // Find user in the users array based on username
-    const user = users.find(user => user.username === username);
+    const user = users.find(user => 
+      user.username.toLowerCase() === username.toLowerCase() ||
+      user.email.toLowerCase() === username.toLowerCase()
+    );
     
+    console.log(users);
+
     if (user) {
-      // Append user with userType
-      const updatedUser = { ...user, type: userType };
-      // Update the user in the parent component
-      updateUser(updatedUser);
-      setError('');
-      // Navigate to the dashboard route
-      navigate('/dashboard');
+      if (user.password === password) {
+        // Append user with userType (ensure userType is defined)
+        const updatedUser = { ...user, type: userType || '' };
+        // Update the user in the parent component
+        updateUser(updatedUser);
+        setError('');
+        // Navigate to the dashboard route (ensure navigate function is correctly imported)
+        navigate('/dashboard');
+      }
+      else {
+        setError('Invalid username or password.');
+      }
     } else {
       setError('Invalid username or password.');
     }
@@ -51,11 +61,11 @@ const Login = ({ users, updateUser }) => {
         <div className="login-container">
         <h2>{userType === 'student' ? 'Student Login' : 'School Login'}</h2>
         <div className="input-container">
-          <label className="input-label">Username:</label>
+          <label className="input-label">Username (user1):</label>
           <input className="input-field" type="text" value={username} onChange={(e) => setUsername(e.target.value)} maxLength={20} />
         </div>
         <div className="input-container">
-          <label className="input-label">Password:</label>
+          <label className="input-label">Password (password1):</label>
           <input className="input-field" type="password" value={password} onChange={(e) => setPassword(e.target.value)} maxLength={20} />
         </div>
         <button className="login-button" onClick={handleLogin}>Login</button>
