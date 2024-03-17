@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import OpenBankSim from './OpenBankSim';
 
-const OpenBankAcct = ({ user, updateUser }) => {
+const OpenBankAcct = ({ user, updateUser, handleBeginSim2Click }) => {
   const totalSteps = 3; // Define the total number of steps
   // State to track the current step
   const [currentStep, setCurrentStep] = useState(1);
@@ -37,7 +37,7 @@ const OpenBankAcct = ({ user, updateUser }) => {
   return (
     <div>
       {showOpenBankSim ? (
-        <OpenBankSim user={user} updateUser={updateUser} />
+        <OpenBankSim user={user} updateUser={updateUser} handleBeginSim2Click={handleBeginSim2Click} />
       ) : (
         <div>
           <h2>Open Bank Account</h2>

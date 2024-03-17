@@ -11,7 +11,9 @@ function usernameToNumber(username) {
   return sum;
 }
 
-const OpenBankSim = ({ user, updateUser }) => {
+
+
+const OpenBankSim = ({ user, updateUser, handleBeginSim2Click }) => {
   const [showAvatar, setShowAvatar] = useState(true);
   const [currentStep, setCurrentStep] = useState(1);
 
@@ -19,6 +21,18 @@ const OpenBankSim = ({ user, updateUser }) => {
   const navigate = useNavigate();
   const handleLoginClick = () => {
     navigate('/login');
+  };
+
+  const handleSetBankAcctNum = (user) => {
+    // Generate a random 10-digit number inline
+    const randomNum = Math.floor(1000000000 + Math.random() * 9000000000);
+    const randomBankAcctNum = randomNum.toString().substring(0, 10);
+    
+    // Update user object with the generated random bank account number
+    const updatedUser = { ...user, bankacct: randomBankAcctNum };
+    updateUser(updatedUser);
+    console.log(user);
+    handleBeginSim2Click();
   };
 
   // Convert the username into a numeric representation
@@ -115,7 +129,7 @@ const OpenBankSim = ({ user, updateUser }) => {
             <div className="option" onClick={() => handleOptionClick('Option 2')}>
               🥸 Review Fee Schedule
             </div>
-            <div className="option" onClick={() => handleOptionClick('Option 3')}>
+            <div className="option" onClick={() => handleSetBankAcctNum(user)}>
               ✒️ Agree And Sign
             </div>
           </div>
