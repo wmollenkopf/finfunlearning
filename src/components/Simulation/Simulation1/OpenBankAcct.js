@@ -45,7 +45,7 @@ const OpenBankAcct = ({ user, updateUser }) => {
           {currentStep === 1 && (
             <div>
               {/* Step 1 content */}
-              <h2>Open Bank Account</h2>
+              <h3>Step 1: Determining Where To Open Your Account</h3>
               <p>
                 Opening your first checking and savings account can feel overwhelming. Here's a quick guide to help you:
               </p>

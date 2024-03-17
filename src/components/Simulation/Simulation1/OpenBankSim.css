@@ -6,6 +6,8 @@
 	border: 5px solid #333; /* Dark border color */
 	border-radius: 20px; /* Curved border */
 	background-color: #f0f0f0; /* Lighter background color */
+	background: #f0f0f0 url('ai_bank_lobby2.jpg');
+	background-size: 100% auto;
 	padding: 20px; /* Add some padding */
   }
   
@@ -15,7 +17,8 @@
 	border: 3px solid #333; /* Dark border color */
 	border-radius: 5px; /* Curved border */
 	padding: 10px;
-	background-color: pink; /* Lighter background color */
+	/* background-color: rgba(203, 203, 240, 0.90); */
+	background-color: #CABCAF;
 	margin: 5px;
 }
   
@@ -28,8 +31,10 @@
   .option {
 	width: 400px;
 	text-align: center;
-	background-color: #007bff;
-	color: #ffffff;
+	/* background-color: #007bff; */
+	background-color: #CABCAF;
+	color: #000;
+	border: 1px solid black;
 	padding: 15px 30px;
 	margin-bottom: 10px;
 	border-radius: 10px;
@@ -38,6 +43,10 @@
   }
   
   .option:hover {
-	background-color: #0056b3;
+	background-color: #FFEDE0;
   }
   
+
+  .no-underline-link {
+	text-decoration: none;
+  }

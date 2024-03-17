@@ -39,7 +39,11 @@ const OpenBankSim = ({ user, updateUser }) => {
       case 2:
         console.log(`Selected deposit option: ${option}`);
         console.log('Teller proceeds with account opening...');
-        // setCurrentStep(3); // Move to the next step
+        setCurrentStep(3); // Move to the next step
+      case 3:
+          console.log(`Selected paycheck deposit percentage option: ${option}`);
+          console.log('Let\'s review and sign...');
+          // setCurrentStep(3); // Move to the next step
         break;
       default:
         break;
@@ -71,6 +75,13 @@ const OpenBankSim = ({ user, updateUser }) => {
           <p>How much do you wish to deposit up front from your first paycheck?</p>
           </div>
         )}
+        {currentStep === 3 && (
+          <div>
+          <p>Thank you for setting up your account. Please review the the terms and sign.</p>
+          <p>Also, please make yourself familiar with the fees associated with having an account here.</p>
+          <p><a href="#" className="no-underline-link">📜 Fee Schedule</a></p>
+          </div>
+        )}
         {/* Add more dialogues for additional steps */}
       </div>
 
@@ -79,20 +90,33 @@ const OpenBankSim = ({ user, updateUser }) => {
         {currentStep === 1 && (
           <div>
             <div className="option" onClick={() => handleOptionClick('Option 1')}>
-              Show ID and documents
+              📄 Show ID and documents
             </div>
           </div>
         )}
         {currentStep === 2 && (
           <div>
             <div className="option" onClick={() => handleOptionClick('Option 1')}>
-              100% of paycheck
+              <strong>100%</strong> of paycheck
             </div>
             <div className="option" onClick={() => handleOptionClick('Option 2')}>
-              50% of paycheck
+              <strong>50%</strong> of paycheck
             </div>
             <div className="option" onClick={() => handleOptionClick('Option 3')}>
-              25% of paycheck
+              <strong>25%</strong> of paycheck
+            </div>
+          </div>
+        )}
+        {currentStep=== 3 && (
+          <div>
+            <div className="option" onClick={() => handleOptionClick('Option 1')}>
+              🤔 Ask Questions
+            </div>
+            <div className="option" onClick={() => handleOptionClick('Option 2')}>
+              🥸 Review Fee Schedule
+            </div>
+            <div className="option" onClick={() => handleOptionClick('Option 3')}>
+              ✒️ Agree And Sign
             </div>
           </div>
         )}
