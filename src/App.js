@@ -27,7 +27,7 @@ const generateAvatar = () => {
 
 
 const App = () => {
-  const [user, setUser] = useState({ job: null }); // Ensure user object has a job attribute
+  const [user, setUser] = useState(); // Ensure user object has a job attribute
 
   useEffect(() => {
     if (user && !user.avatar) {
