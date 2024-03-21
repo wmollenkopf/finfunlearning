@@ -4,7 +4,7 @@ import jobs from './jobs'; // Import the jobs constant
 import { useNavigate } from 'react-router-dom';
 import OpenBankAcct from './OpenBankAcct'; // Import the OpenBankAcct component
 
-const Simulation1 = ({ user, updateUser }) => {
+const Simulation1 = ({ user, updateUser, handleBeginSim2Click}) => {
 
 
   const [selectedJob, setSelectedJob] = useState(null);
@@ -40,10 +40,9 @@ const Simulation1 = ({ user, updateUser }) => {
 
   return (
     <div className="simulation1-container">
-      {/* Add content for Simulation 1 */}
       <h2>Simulation 1: Your First Job!</h2>
       {showOpenBankAcct ? (
-        <OpenBankAcct user={user} updateUser={updateUser} />
+          <OpenBankAcct user={user} updateUser={updateUser} handleBeginSim2Click={handleBeginSim2Click} />
       ) : user.job ? (
         // Placeholder text when a job is selected
         <div>

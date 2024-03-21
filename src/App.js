@@ -21,13 +21,13 @@ const generateAvatar = () => {
   // Return the URL for the avatar image using https
   const url = `https://robohash.org/${seed}.png?set=set1&size=200x200`;
   // const url = `https://api.adorable.io/avatars/200/${seed}.png`;
-  console.log(url);
+  // console.log(url);
   return url;
 };
 
 
 const App = () => {
-  const [user, setUser] = useState({ job: null }); // Ensure user object has a job attribute
+  const [user, setUser] = useState(); // Ensure user object has a job attribute
 
   useEffect(() => {
     if (user && !user.avatar) {
