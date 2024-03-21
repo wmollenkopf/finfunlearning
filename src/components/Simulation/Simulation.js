@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Simulation.css'; // Import CSS file for styling
+import './Simulation.css';
 import Simulation1 from './Simulation1/Simulation1';
 import Simulation2 from './Simulation2/Simulation2';
 import Simulation3 from './Simulation3/Simulation3';

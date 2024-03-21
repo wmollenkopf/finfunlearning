@@ -5,7 +5,6 @@ import pieChartImage from './budget_pie.png';
 
 const Simulation3 = ({ user, updateUser}) => {
 
-
   // Check for user object before proceeding...
   const navigate = useNavigate();
   const handleLoginClick = () => {

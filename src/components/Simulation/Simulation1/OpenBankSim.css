@@ -3,19 +3,19 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	border: 5px solid #333; /* Dark border color */
-	border-radius: 20px; /* Curved border */
-	background-color: #f0f0f0; /* Lighter background color */
+	border: 5px solid #333;
+	border-radius: 20px;
+	background-color: #f0f0f0;
 	background: #f0f0f0 url('ai_bank_lobby2.jpg');
 	background-size: 100% auto;
-	padding: 20px; /* Add some padding */
+	padding: 20px;
   }
   
   
 .dialog-prompt {
 	width: 75%;
-	border: 3px solid #333; /* Dark border color */
-	border-radius: 5px; /* Curved border */
+	border: 3px solid #333;
+	border-radius: 5px;
 	padding: 10px;
 	/* background-color: rgba(203, 203, 240, 0.90); */
 	background-color: #CABCAF;

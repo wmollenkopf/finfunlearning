@@ -1,44 +1,42 @@
-/* styles.css */
 .simulation3-container {
-	text-align: left; /* Align content in the center */
+	text-align: left;
   }
   
   .pie-chart-container {
-	text-align: center; /* Align content in the center */
+	text-align: center;
 	display: flex;
-	justify-content: space-between; /* Space out the left and right text */
-	align-items: center; /* Center vertically */
-	margin-bottom: 20px; /* Add some margin to separate from the bottom text */
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
   }
   
   .left-text,
   .right-text,
   .bottom-text {
-	flex: 1; /* Take up equal space */
-	text-align: center; /* Center text */
+	flex: 1;
+	text-align: center;
   }
   
   .pie-chart-image {
-	max-width: 300px; /* Adjust the maximum width of the pie chart image */
+	max-width: 300px;
   }
   
-  /* Adjust styles for individual text elements as needed */
   .left-text p,
   .right-text p,
   .bottom-text p {
-	font-size: 16px; /* Set font size for headings */
-	font-weight: bold; /* Make headings bold */
-	margin-bottom: 10px; /* Add some margin between headings and list items */
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
   }
   
   .custom-list {
-	list-style-type: none; /* Hide default bullets */
-	padding-left: 0; /* Remove default padding */
+	list-style-type: none;
+	padding-left: 0;
   }
   
   .custom-list li {
-	font-size: 14px; /* Set font size for list items */
-	font-weight: normal; /* Remove bold styling */
-	margin-bottom: 5px; /* Add some margin between list items */
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 5px;
   }
   

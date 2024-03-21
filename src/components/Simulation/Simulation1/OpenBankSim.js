@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import './OpenBankSim.css'; // Import CSS file for styling
+import './OpenBankSim.css';
 import { useNavigate } from 'react-router-dom';
 
-// Function to convert the username into a numeric representation
+// Convert the username into a numeric representation
+// Used for creating an avatar at random later
 function usernameToNumber(username) {
   let sum = 0;
   for (let i = 0; i < username.length; i++) {
@@ -35,7 +36,7 @@ const OpenBankSim = ({ user, updateUser, handleBeginSim2Click }) => {
     handleBeginSim2Click();
   };
 
-  // Convert the username into a numeric representation
+  // Convert the username into a numeric form...
   const usernameNumeric = user ? usernameToNumber(user.username) : '';
 
   // Return the URL for the avatar image using https
@@ -66,7 +67,7 @@ const OpenBankSim = ({ user, updateUser, handleBeginSim2Click }) => {
 
   return (
     <div className="dialog-container">
-      {/* Render avatar with border */}
+      {/* Display the avatar with border */}
       {showAvatar && (
         <div className="avatar-container">
           <div className="avatar-border">
@@ -75,7 +76,7 @@ const OpenBankSim = ({ user, updateUser, handleBeginSim2Click }) => {
         </div>
       )}
 
-      {/* Render dialogue based on current step */}
+      {/* Display the dialogue based on current step */}
       <div className="dialog-prompt">
         {currentStep === 1 && (
           <div>
@@ -96,10 +97,9 @@ const OpenBankSim = ({ user, updateUser, handleBeginSim2Click }) => {
           <p><a href="#" className="no-underline-link">📜 Fee Schedule</a></p>
           </div>
         )}
-        {/* Add more dialogues for additional steps */}
       </div>
 
-      {/* Render dialogue options based on current step */}
+      {/* Display the dialogue options based on current step */}
       <div className="options-container">
         {currentStep === 1 && (
           <div>
@@ -134,7 +134,6 @@ const OpenBankSim = ({ user, updateUser, handleBeginSim2Click }) => {
             </div>
           </div>
         )}
-        {/* Add more options for additional steps */}
       </div>
     </div>
   );
