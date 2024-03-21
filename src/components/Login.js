@@ -1,7 +1,6 @@
-// src/components/Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Import CSS file for styling
+import './Login.css'; 
 
 const Login = ({ users, updateUser }) => {
   const [userType, setUserType] = useState('');

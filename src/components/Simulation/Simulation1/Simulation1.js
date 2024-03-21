@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './Simulation1.css'; // Import CSS file for styling
-import jobs from './jobs'; // Import the jobs constant
+import './Simulation1.css';
+import jobs from './jobs';
 import { useNavigate } from 'react-router-dom';
-import OpenBankAcct from './OpenBankAcct'; // Import the OpenBankAcct component
+import OpenBankAcct from './OpenBankAcct';
 
 const Simulation1 = ({ user, updateUser, handleBeginSim2Click}) => {
 
@@ -49,13 +49,12 @@ const Simulation1 = ({ user, updateUser, handleBeginSim2Click}) => {
           <p>You selected: {user.job.title}</p>
           <p>Your starting pay is: ${user.job.pay}</p>
           <p>Next, let's review the steps necessary for opening a bank account.</p>
-          {/* Next button */}
           <button className="next-button" onClick={handleOpenBankAcctClick}>
             Next
           </button>
         </div>
       ) : (
-        // Render the job list if no job is selected
+        // If no job is selected...
 <div className="job-list">
   {jobs.map((job, index) => (
     <div
@@ -63,7 +62,6 @@ const Simulation1 = ({ user, updateUser, handleBeginSim2Click}) => {
       className="job-item"
       onClick={() => handleJobClick(job)}
     >
-      {/* Render job title, description, and image */}
       <h3>{job.title} @ ${job.pay}</h3>
       <p>{job.description}</p>
       <img src={job.image} alt={job.title} className="job-image" />
