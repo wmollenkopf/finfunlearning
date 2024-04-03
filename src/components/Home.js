@@ -1,7 +1,12 @@
 import React from 'react';
+import SplashPage from '../components/SplashPage/SplashPage';
 
 const Home = () => {
-  return <h2>Home Page</h2>;
+  return (
+    <div>
+      <SplashPage />
+    </div>
+  );
 };
 
 export default Home;
