@@ -14,13 +14,12 @@ const Login = ({ users, updateUser }) => {
   };
 
   const handleLogin = () => {
-    // Check if username and password are not empty
     if (!username || !password) {
       setError('Please enter username and password.');
       return;
     }
 
-    // Find user in the users array based on username
+    // Find the user object based on the username...
     const user = users.find(user => 
       user.username.toLowerCase() === username.toLowerCase() ||
       user.email.toLowerCase() === username.toLowerCase()
@@ -30,12 +29,13 @@ const Login = ({ users, updateUser }) => {
 
     if (user) {
       if (user.password === password) {
-        // Append user with userType (ensure userType is defined)
         const updatedUser = { ...user, type: userType || '' };
+        
         // Update the user in the parent component
         updateUser(updatedUser);
         setError('');
-        // Navigate to the dashboard route (ensure navigate function is correctly imported)
+        
+        // Go to the dashboard page...
         navigate('/dashboard');
       }
       else {

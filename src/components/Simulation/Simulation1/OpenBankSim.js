@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './OpenBankSim.css';
 import { useNavigate } from 'react-router-dom';
 
-// Convert the username into a numeric representation
+// Converts the username into a numeric representation
 // Used for creating an avatar at random later
 function usernameToNumber(username) {
   let sum = 0;
@@ -67,7 +67,6 @@ const OpenBankSim = ({ user, updateUser, handleBeginSim2Click }) => {
 
   return (
     <div className="dialog-container">
-      {/* Display the avatar with border */}
       {showAvatar && (
         <div className="avatar-container">
           <div className="avatar-border">
@@ -75,8 +74,6 @@ const OpenBankSim = ({ user, updateUser, handleBeginSim2Click }) => {
           </div>
         </div>
       )}
-
-      {/* Display the dialogue based on current step */}
       <div className="dialog-prompt">
         {currentStep === 1 && (
           <div>
@@ -98,8 +95,6 @@ const OpenBankSim = ({ user, updateUser, handleBeginSim2Click }) => {
           </div>
         )}
       </div>
-
-      {/* Display the dialogue options based on current step */}
       <div className="options-container">
         {currentStep === 1 && (
           <div>

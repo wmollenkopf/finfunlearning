@@ -11,18 +11,15 @@ const Simulation1 = ({ user, updateUser, handleBeginSim2Click}) => {
   const [showOpenBankAcct, setShowOpenBankAcct] = useState(false);
 
   const handleJobClick = (job) => {
-    // Update user object with selected job
     const updatedUser = { ...user, job: job };
     updateUser(updatedUser);
     setSelectedJob(job.title);
   };
 
   const handleOpenBankAcctClick = () => {
-    // Navigate to the OpenBankAcct component and pass the user object as a prop
     setShowOpenBankAcct(true);
   };
 
-  // Check for user object before proceeding...
   const navigate = useNavigate();
   const handleLoginClick = () => {
     navigate('/login');
@@ -44,7 +41,6 @@ const Simulation1 = ({ user, updateUser, handleBeginSim2Click}) => {
       {showOpenBankAcct ? (
           <OpenBankAcct user={user} updateUser={updateUser} handleBeginSim2Click={handleBeginSim2Click} />
       ) : user.job ? (
-        // Placeholder text when a job is selected
         <div>
           <p>You selected: {user.job.title}</p>
           <p>Your starting pay is: ${user.job.pay}</p>
@@ -54,21 +50,21 @@ const Simulation1 = ({ user, updateUser, handleBeginSim2Click}) => {
           </button>
         </div>
       ) : (
-        // If no job is selected...
-<div className="job-list">
-  {jobs.map((job, index) => (
-    <div
-      key={index}
-      className="job-item"
-      onClick={() => handleJobClick(job)}
-    >
-      <h3>{job.title} @ ${job.pay}</h3>
-      <p>{job.description}</p>
-      <img src={job.image} alt={job.title} className="job-image" />
-    </div>
-  ))}
-</div>
-      )}
+              // If no job is selected...
+              <div className="job-list">
+                {jobs.map((job, index) => (
+                  <div
+                    key={index}
+                    className="job-item"
+                    onClick={() => handleJobClick(job)}
+                  >
+                    <h3>{job.title} @ ${job.pay}</h3>
+                    <p>{job.description}</p>
+                    <img src={job.image} alt={job.title} className="job-image" />
+                  </div>
+                ))}
+              </div>
+          )}
     </div>
   );
 };
