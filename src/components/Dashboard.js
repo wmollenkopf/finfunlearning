@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Dashboard = ({ user }) => {
+  
 	// Check for user object before proceeding...
 	if (!user) {return (<div><h2>Please log in to view the Dashboard.</h2></div>);}
   

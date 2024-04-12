@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Simulation3.css'; // Import CSS file for styling
+import './Simulation3.css';
 import { useNavigate } from 'react-router-dom';
 import pieChartImage from './budget_pie.png';
 

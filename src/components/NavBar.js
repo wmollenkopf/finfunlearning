@@ -25,7 +25,7 @@ const NavBar = ({ user, handleLogout }) => {
               Home
             </Link>
           </li>
-          {/* Conditional rendering based on user authentication */}
+          {/* The below will only display if logged in... */}
           {!user ? (
             <li className="nav-item">
               <Link className="nav-link" to="/login">

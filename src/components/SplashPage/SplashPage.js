@@ -1,5 +1,6 @@
 import React from 'react';
 import './SplashPage.css';
+
 // Import images
 import catImage from './icons8-cat-96.png';
 import crabImage from './icons8-crab-96.png';

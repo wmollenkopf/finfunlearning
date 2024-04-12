@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import './Simulation2.css'; // Import CSS file for styling
+import './Simulation2.css'; 
 import { useNavigate } from 'react-router-dom';
 
 const Simulation2 = ({ user, updateUser, handleBeginSim3Click }) => {
 
-
-  // Check for user object before proceeding...
   const navigate = useNavigate();
   const handleLoginClick = () => {
     navigate('/login');

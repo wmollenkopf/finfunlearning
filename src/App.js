@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
@@ -12,7 +11,6 @@ const users = [
   { username: 'user1', email: 'user1@example.com', password: 'password1', name: 'William' },
   { username: 'user2', email: 'user2@example.com', password: 'password2', name: 'Sierra' },
   { username: 'user3', email: 'user3@example.com', password: 'password3', name: 'Brady' },
-  // Add more users as needed
 ];
 
 const generateAvatar = () => {
@@ -20,7 +18,6 @@ const generateAvatar = () => {
   const seed = Math.random().toString(36).substring(7);
   // Return the URL for the avatar image using https
   const url = `https://robohash.org/${seed}.png?set=set1&size=200x200`;
-  // const url = `https://api.adorable.io/avatars/200/${seed}.png`;
   // console.log(url);
   return url;
 };

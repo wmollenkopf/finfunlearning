@@ -63,7 +63,6 @@ const Simulation = ({ user, updateUser }) => {
 
       {/* Right side */}
       <div className="simulation-content">
-        {/* Render the button if Simulation1 is not yet shown */}
         {(!showSimulation1 && !showSimulation2 && !showSimulation3) && (
           <div>
             <h2>Simulation 1: Your First Job!</h2>

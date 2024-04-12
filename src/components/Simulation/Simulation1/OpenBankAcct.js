@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import OpenBankSim from './OpenBankSim';
 
 const OpenBankAcct = ({ user, updateUser, handleBeginSim2Click }) => {
-  const totalSteps = 3; // Define the total number of steps
+  const totalSteps = 3; // Total number of steps
   // State to track the current step
   const [currentStep, setCurrentStep] = useState(1);
 
-  // Function to handle "Next" button click
+  // "Next" button click
   const handleNextClick = () => {
     setCurrentStep(currentStep + 1);
   };
 
-  // Function to handle "Previous" button click
+  // "Previous" button click
   const handlePrevClick = () => {
     setCurrentStep(Math.max(currentStep - 1, 1)); // Ensure the currentStep doesn't go below 1
   };
@@ -19,7 +19,7 @@ const OpenBankAcct = ({ user, updateUser, handleBeginSim2Click }) => {
   // State to track whether each section is expanded or not
   const [expandedSections, setExpandedSections] = useState({});
 
-  // Function to toggle the expansion state of a section
+  // Toggle the expansion state of a section
   const toggleSection = (section) => {
     setExpandedSections((prevState) => ({
       ...prevState,
@@ -41,7 +41,7 @@ const OpenBankAcct = ({ user, updateUser, handleBeginSim2Click }) => {
       ) : (
         <div>
           <h2>Open Bank Account</h2>
-          {/* Render different steps based on the current step */}
+          {/* The below will render different "steps" based on the currentStep variable */}
           {currentStep === 1 && (
             <div>
               {/* Step 1 content */}
@@ -138,7 +138,6 @@ const OpenBankAcct = ({ user, updateUser, handleBeginSim2Click }) => {
               {/* Step 3 content */}
               <h3>Upwards and Onwards!</h3>
               <p>Let's give it a try shall we? Let's move onto the second simulation of setting up a bank account!</p>
-              {/* Add more content for step 3 */}
             </div>
           )}
           {/* Next and Previous buttons */}
