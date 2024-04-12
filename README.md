@@ -1,7 +1,7 @@
 # FinFunLearning
 
 ## URL:
-[https://finfunlearning.biri.me]
+### [https://finfunlearning.biri.me](https://finfunlearning.biri.me)
 
 ## NOTES:
 * There is currently no backend server, so once you close your current browser session or refresh to certain pages that would force a relog, you will lose your user associated details for that session.
