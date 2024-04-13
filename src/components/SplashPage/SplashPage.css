@@ -21,6 +21,7 @@
   .feature-section {
     flex: 1;
     padding: 1rem;
+    text-align: center;
   }
   
   .footer {
@@ -85,7 +86,12 @@
     animation: scroll 20s linear infinite; /* Adjust speed of scrolling */
   }
   
-  .finHomeImg {
-    width: 300px;
+  .feature-section-home {
+    flex: 1;
+    text-align: center;
+    /* border: 1px solid black; */
+  }
+
+  .feature-section-home img {
     height: 300px;
   }
