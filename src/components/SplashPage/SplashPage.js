@@ -2,6 +2,7 @@ import React from 'react';
 import './SplashPage.css';
 
 // Import images
+import homeImage from './Homescreen.001.jpeg';
 import catImage from './icons8-cat-96.png';
 import crabImage from './icons8-crab-96.png';
 import dragonImage from './icons8-dragon-96.png';
@@ -39,6 +40,7 @@ const SplashPage = () => {
         <div className="feature-section">
           <h2>Explore Fintech</h2>
           <p>Stay updated with the latest trends and innovations in the fintech industry.</p>
+          <p><img src={homeImage} alt="FinFunLearning" /></p>
         </div>
       </div>
       <div className="schools-section">
@@ -46,7 +48,7 @@ const SplashPage = () => {
         <div className="school-grid">
           {schools.map(school => (
             <div key={school.id} className="school-tile">
-              <img src={school.imageUrl} alt={school.name} />
+              <img src={school.imageUrl} alt={school.name} className="finHomeImg"/>
               <p>{school.name}</p>
             </div>
           ))}

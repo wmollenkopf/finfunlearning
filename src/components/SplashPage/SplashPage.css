@@ -54,15 +54,6 @@
     border-radius: 5px;
   }
   
-  /* Existing styles... */
-  
-
-
-
-  /* SplashPage.css */
-
-/* Existing styles... */
-
 .school-scroll {
     overflow: hidden;
     white-space: nowrap;
@@ -94,5 +85,7 @@
     animation: scroll 20s linear infinite; /* Adjust speed of scrolling */
   }
   
-  /* Existing styles... */
-  
+  .finHomeImg {
+    width: 300px;
+    height: 300px;
+  }
