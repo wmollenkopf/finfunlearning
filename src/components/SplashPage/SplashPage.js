@@ -29,8 +29,8 @@ const SplashPage = () => {
   return (
     <div className="splash-page">
       <header className="header">
-        <h1>Welcome to our Learning and Fintech Platform</h1>
-        <p>Empowering you to learn and explore the world of finance and technology.</p>
+        <h1>Welcome to FinFUN Learning</h1>
+        <p>Empowering you to learn and explore the world of finance and essential life lessons.</p>
       </header>
       <div className="main-content">
         <div className="feature-section">
@@ -41,8 +41,8 @@ const SplashPage = () => {
           <p><img src={homeImage} alt="FinFunLearning" className="finHomeImg" id="finHomeImg" /></p>
         </div>
         <div className="feature-section">
-          <h2>Explore Fintech</h2>
-          <p>Stay updated with the latest trends and innovations in the fintech industry.</p>
+          <h2>Explore Finance</h2>
+          <p>Learn Finance in fun and engaging new ways.</p>
         </div>
       </div>
       <div className="schools-section">
