@@ -137,7 +137,7 @@ const OpenBankAcct = ({ user, updateUser, handleBeginSim2Click }) => {
             <div>
               {/* Step 3 content */}
               <h3>Upwards and Onwards!</h3>
-              <p>Let's give it a try shall we? Let's move onto the second simulation of setting up a bank account!</p>
+              <p>Let's give it a try shall we? Let's move onto the simulation of setting up a bank account!</p>
             </div>
           )}
           {/* Next and Previous buttons */}
